@@ -72,7 +72,7 @@ function creaNuevaDB(tx){
 		"telefono VARCHAR(30), " +
 		"categoria VARCHAR(30), " +
 		"foto VARCHAR(200), " + 
-		"email VARCHAR(30))"
+		"email VARCHAR(30))";
 		//"nota VARCHAR(200))";
 		
 	tx.executeSql(sql);
