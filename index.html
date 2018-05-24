@@ -36,23 +36,23 @@
         </div>
       </div>
       <div data-role="content">
-      <div align="center"><img src="images/icono_servicios.png" width="15%" alt="Servicios"></div>
+      <div align="center"><img src="images/Iconos-servicios-05-300x227.png" width="132" height="98"></div>
         <div data-role="collapsible-set" >
-          <div data-role="collapsible" id="lista_familia">
-            <h3>Hogar</h3>
+          <div data-role="collapsible" id="lista_casa">
+            <h3>Casa</h3>
             <ul data-role="listview" data-filter="true" data-inset="true" data-split-icon="edit">
               
               
             </ul>
             
           </div>
-          <div data-role="collapsible" data-collapsed="true" id="lista_trabajo">
-            <h3>Mascotas</h3>
+          <div data-role="collapsible" data-collapsed="true" id="lista_negocio">
+            <h3>Negocio</h3>
             <ul data-role="listview" data-filter="true" data-inset="true" data-split-icon="edit">
             </ul>
           </div>
-          <div data-role="collapsible" data-collapsed="true" id="lista_amigo">
-            <h3>Comida</h3>
+          <div data-role="collapsible" data-collapsed="true" id="lista_carro">
+            <h3>Automovil</h3>
             <ul data-role="listview" data-filter="true" data-inset="true" data-split-icon="delete">
             </ul>
           </div>
@@ -85,30 +85,30 @@
       
       <div data-role="content">
       <center>
-      	<div class="caja_blanca">
-        	<p id="categoria"></p>
+        <div class="caja_blanca">
+          <p id="categoria"></p>
             <div id="foto"><img id="foto_img" src="assets/no_foto.png"/></div>
         </div>
         </center>
 
      	<div class="caja_blanca">
-        <h3 id="nombre">Unidad Mazatlan 1</h3>
-         <div ><span id="num_tel">CLL. Leandro Valle</span> <a href="#" data-role="button" data-inline="true" data-icon="phone" data-iconpos="notext" id="telefono">Llamar</a></div>
-        <div id="email"><span id="label_mail">centro@farmaciasdesimilares.com</span> <a href="#" data-role="button" data-inline="true" data-icon="mail" data-iconpos="notext">Llamar</a></div>
+        <h3 id="nombre">Bordados autenticos 1</h3>
+         <div ><span id="num_tel">centro</span> <a href="#" data-role="button" data-inline="true" data-icon="phone" data-iconpos="notext" id="telefono">Llamar</a></div>
+        <div id="email"><span id="label_mail">bordados@autenticos.com</span> <a href="#" data-role="button" data-inline="true" data-icon="mail" data-iconpos="notext">Llamar</a></div>
         </div>
 
 
       </div>
       
       <div data-role="footer" data-position="fixed">
-   		<div data-role="navbar">
+      <div data-role="navbar">
       <ul>
         <li><a href="#home" data-rel="back" data-role="button" data-icon="arrow-l">Atrás</a></li>
         <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li>
         <li><a href="#ventana" data-role="button"  data-icon="info">Info</a></li>
         <li><a href="#ayuda" data-icon="arrow-r" data-role="button" >Siguiente</a></li>
       </ul>
-    	</div>
+      </div>
      </div>
       
     </div>
@@ -119,29 +119,30 @@
     
     
     <!--página de edición-->
-    <div data-role="page" id="form">
+     <div data-role="page" id="form">
       <div data-role="header">
         <h1>Agregar Servicios</h1>
       </div>
       <center>
        <div data-role="content">
            <div class="" >
-        		<div id="fotoEdit"><a href="#"><img width="10%" id="fotoEdit_img" src="assets/no_foto.png"/></a>
+            <div id="fotoEdit"><a href="#"><img width="10%" id="fotoEdit_img" src="assets/no_foto.png"/></a>
             </div>
         </div>
         
-           <div data-role="fieldcontain">
+           <div data-role="fieldcontain"></div>
              <input type="text" name="ti_nombre" id="ti_nombre" value="" placeholder="Nombre del Servicio" />
-           </div>
-           <div data-role="fieldcontain">
-             <input type="email" name="ti_apellidos" id="ti_apellidos" value="" placeholder="Telefono" />
-           </div>
-           <div data-role="fieldcontain">
-             <input type="text" name="ti_telefono" id="ti_telefono" value="" placeholder="Domicilio" />
-           </div>
+           
+             <div data-role="fieldcontain"></div>
+             <input type="email" name="ti_telefono" id="ti_telefono" value="" placeholder="Telefono" />
+             <div data-role="fieldcontain"></div>
+             <input type="text" name="ti_domicilio" id="ti_domicilio" value="" placeholder="Domicilio" />
+             <div data-role="fieldcontain"></div>
+             <input type="text" name="ti_mail" id="ti_mail" value="" placeholder="Email" />
+           
                       
            <div data-role="fieldcontain">
-             <textarea cols="40" rows="8" name="ti_mail" id="ti_mail"  placeholder="Nota"></textarea>
+             <textarea cols="40" rows="8" name="ti_nota" id="ti_nota"  placeholder="Nota"></textarea>
            </div>
            <div id="cajaCategorias" >
                <div data-role="fieldcontain" >
@@ -155,7 +156,7 @@
                  </fieldset>
                </div>
                  </div>
-                 
+       
                    
 
 
@@ -228,11 +229,12 @@
       <div data-role="content">
       
       <center>
-      <img src="images/rodolfo.jpg" width="15%"> <br>
+        <img src="images/IMG-20170802-WA0000.jpg" width="132" height="175"><br>
       </center>
       Datos personales
      	 <ul id="listaAyuda">
-        	Rodolfo Bustamante Osuna<br>
+     	   Jaime Antonio Bastidas Paez
+     	   <br>
             Carrera: Licenciatura en Ingeniería en Sistemas de Información<br>
             Materia: Ing. Desarrollo de aplicaciones para comercio electrónico<br>
         </ul>
@@ -269,7 +271,7 @@
   </div>
 <div data-role="content" align="justify">
  <center> Aplicación desarrollada mediante PhoneGap para Proyecto Final.<p>
-Por Rodolfo Bustamante - Mayo de 2018<p> 
+Por Jaime Bastidas- Mayo de 2018<p> 
   <a href="" data-rel="back"  data-role="button">Cerrar</a>
   </center>
 </div>
