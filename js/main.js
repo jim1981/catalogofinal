@@ -79,7 +79,7 @@ function creaNuevaDB(tx){
 	
 	//tx.executeSql("INSERT INTO agenda_curso (id,nombre,foto,telefono,email,domicilio,categoria,nota) VALUES (1,'null',null','null','null','null','null','null')");
 	
-	tx.executeSql("INSERT INTO agenda_curso (id,nombre,foto,telefono,email,domicilio,categoria,nota) VALUES (1,'jaime',251161','shfjfshs','las mana','maza','automovi','hola')");
+	tx.executeSql("INSERT INTO cat_servicios (id,nombre,foto,telefono,email,domicilio,categoria,nota) VALUES (1,'jaime',251161','shfjfshs','las mana','maza','carro','hola')");
 }
 
 
