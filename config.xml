@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.catalogo"
+    version   = "1.0.0">
+
+<name>catalogo de servicios</name>
+<icon src ="images/agenda.jpg" gap:platform="android" gap:density="ldpi"/>
+<icon src ="images/agenda.jpg" gap:platform="android" gap:density="mdpi"/>
+<icon src ="images/agenda.jpg" gap:platform="android" gap:density="hdpi"/>
+<icon src ="images/agenda.jpg" gap:platform="android" gap:density="xhdpi"/>
+
+<description>
+Lista de contactos de servicios
+</description>
+
+<author href="https://example.com" email="jaimebast@hotmail.com">
+Jaime Bastidas
+</author>
+
+</widget>
