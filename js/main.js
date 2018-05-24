@@ -167,7 +167,7 @@ function queryDetalleSuccess(tx, results) {
 		$("#nombre").html($.registro.nombre + " | " + $.registro.email);
 		$("#num_tel").html($.registro.telefono);
 		$("#telefono").attr("href", "tel:" + $.registro.telefono);
-		$("#label_mail").html("E-mail: " + $.registro.email);
+		$("#label_mail").html("E-mail: " + $.registro.domicilio);
 }
 
 
@@ -275,7 +275,7 @@ function saveNewForm(){
 function queryDBInsertForm(tx){
 	var cat = $("#cajaCategorias").find("input:checked").val();
 	
-	tx.executeSql("INSERT INTO agenda_curso (nombre,domicilio,telefono,categoria,foto,email) VALUES ('"+$("#ti_nombre").val()+"','"+$("#ti_domicilio").val()+"','"+$("#ti_telefono").val()+"','"+cat+"','"+$.imageURL+"','"+$("#ti_mail").val()+"', [], newFormSuccess, errorDB);
+	tx.executeSql("INSERT INTO agenda_curso (nombre,domicilio,telefono,categoria,foto,email) VALUES ('"+$("#ti_nombre").val()+"','"+$("#ti_domicilio").val()+"','"+$("#ti_telefono").val()+"','"+cat+"','"+$.imageURL+"','"+$("#ti_mail").val()+"')", [], newFormSuccess, errorDB);
 }
 function newFormSuccess(tx, results) {
 	var cat = $("#cajaCategorias").find("input:checked").val();
