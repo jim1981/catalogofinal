@@ -164,7 +164,7 @@ function queryDetalleSuccess(tx, results) {
 			_foto = "assets/no_foto.png";
 		}
 		$("#foto_img").attr("src", _foto);
-		$("#nombre").html($.registro.nombre + " | " + $.registro.email);
+		$("#nombre").html($.registro.nombre + " | " + $.registro.domicilio);
 		$("#num_tel").html($.registro.telefono);
 		$("#telefono").attr("href", "tel:" + $.registro.telefono);
 		$("#label_mail").html("E-mail: " + $.registro.domicilio);
