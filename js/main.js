@@ -72,12 +72,12 @@ function creaNuevaDB(tx){
 		"telefono VARCHAR(30), " +
 		"categoria VARCHAR(30), " +
 		"foto VARCHAR(200), " + 
-		"email VARCHAR(30))";
-		//"nota VARCHAR(200))";
+		"email VARCHAR(30)," +
+		"nota VARCHAR(200))";
 		
 	tx.executeSql(sql);
 	
-	tx.executeSql("INSERT INTO agenda_curso (id,nombre,domicilio,telefono,categoria,foto,email) VALUES (1,'yokiro','9520247','plaza sendero','amigo','','sushi')");
+	tx.executeSql("INSERT INTO agenda_curso (id,nombre,domicilio,telefono,categoria,foto,email,nota) VALUES (1,'yokiro','9520247','plaza sendero','amigo','','sushi','soynota')");
 }
 
 
@@ -167,7 +167,8 @@ function queryDetalleSuccess(tx, results) {
 		$("#nombre").html($.registro.nombre + " | " + $.registro.domicilio);
 		$("#num_tel").html($.registro.telefono);
 		$("#telefono").attr("href", "tel:" + $.registro.telefono);
-		$("#label_mail").html("E-mail: " + $.registro.domicilio);
+		$("#label_mail").html("E-mail: " + $.registro.email);
+		$("#label_nota").html("Notas: " + $.registro.nota);
 }
 
 
@@ -209,7 +210,7 @@ function queryFormSuccess(tx, results) {
 		$("#ti_domicilio").val($.registro.domicilio);
 		$("#ti_telefono").val($.registro.telefono);
 		$("#ti_mail").val($.registro.email);
-		//$("#ti_nota").val($.registro.nota);
+		$("#ti_nota").val($.registro.nota);
 		
 		$("#cat_"+$.registro.categoria).trigger("click").trigger("click");	//$("#cat_"+$.registro.categoria).attr("checked",true).checkboxradio("refresh");
 }
@@ -224,7 +225,7 @@ function initForm(){
 	$("#ti_domicilio").val("");
 	$("#ti_telefono").val("");
 	$("#ti_mail").val("");
-	//$("#ti_nota").val("");
+	$("#ti_nota").val("");
 		
 	$("#cat_familia").trigger("click").trigger("click")
 }
@@ -241,7 +242,7 @@ function saveEditForm(){
 
 function queryDBUpdateForm(tx){
 	var cat = $("#cajaCategorias").find("input:checked").val();
-	tx.executeSql('UPDATE agenda_curso SET nombre="'+$("#ti_nombre").val()+'", domicilio="'+$("#ti_domicilio").val()+'",telefono="'+$("#ti_telefono").val()+'",email="'+$("#ti_mail").val()+'",categoria="'+cat+'",foto = "'+$.imageURL+'" WHERE id='+$.id);
+	tx.executeSql('UPDATE agenda_curso SET nombre="'+$("#ti_nombre").val()+'", domicilio="'+$("#ti_domicilio").val()+'",telefono="'+$("#ti_telefono").val()+'",email="'+$("#ti_mail").val()+'",categoria="'+cat+'",foto = "'+$.imageURL+'",nota="'+$("#ti_nota").val()+'" WHERE id='+$.id);
 }
 function updateFormSuccess(tx) {
 	var selector = $("#li_"+$.id);
@@ -275,7 +276,7 @@ function saveNewForm(){
 function queryDBInsertForm(tx){
 	var cat = $("#cajaCategorias").find("input:checked").val();
 	
-	tx.executeSql("INSERT INTO agenda_curso (nombre,domicilio,telefono,categoria,foto,email) VALUES ('"+$("#ti_nombre").val()+"','"+$("#ti_domicilio").val()+"','"+$("#ti_telefono").val()+"','"+cat+"','"+$.imageURL+"','"+$("#ti_mail").val()+"')", [], newFormSuccess, errorDB);
+	tx.executeSql("INSERT INTO agenda_curso (nombre,domicilio,telefono,categoria,foto,email,nota) VALUES ('"+$("#ti_nombre").val()+"','"+$("#ti_domicilio").val()+"','"+$("#ti_telefono").val()+"','"+cat+"','"+$.imageURL+"','"+$("#ti_mail").val()+"','"+$("#ti_nota").val()+"')", [], newFormSuccess, errorDB);
 }
 function newFormSuccess(tx, results) {
 	var cat = $("#cajaCategorias").find("input:checked").val();
