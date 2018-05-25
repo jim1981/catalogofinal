@@ -7,9 +7,9 @@ body {
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-color:#ff925c;
-    background-image:linear-gradient(top, #CCC 0%, #5cd6ff 51%);
-    background-image:-webkit-linear-gradient(top, #CCC 0%, #5cd6ff 51%);
-    background-image:-ms-linear-gradient(top, #CCC 0%, #5cd6ff 51%);
+    background-image:linear-gradient(top, #CCC 0%, #FFFFFF 51%);
+    background-image:-webkit-linear-gradient(top, #CCC 0%, #FFFFFF 51%);
+    background-image:-ms-linear-gradient(top, #CCC 0%, #FFFFFF 51%);
     background-image:-webkit-gradient(
         linear,
         left top,
@@ -86,10 +86,10 @@ margin: .8em 30% .8em;
 
 
 .ui-btn-active {
-    border: 1px solid       #1abc9c /*{global-active-border}*/;
-    background:             #1abc9c /*{global-active-background-color}*/;
+    border: 1px solid       #FFFFFF /*{global-active-border}*/;
+    background:             #FFFFFF /*{global-active-background-color}*/;
     font-weight: bold;
-    color:                  #5cd6ff /*{global-active-color}*/;
+    color:                  #FFFFFF /*{global-active-color}*/;
     cursor: pointer;
     text-decoration: none;
   font-family: Lato, sans-serif
