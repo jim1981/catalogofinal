@@ -49,6 +49,26 @@ function onDeviceReady(){
 			saveNewForm();
 		 }
 	 });
+
+	$("#b_eliminar").click(function(e){
+		if($.id != -1){
+		 	DeletedForm();
+		 }
+	 });
+}
+
+function DeletedForm(){
+	if(db != null){
+		db.transaction(queryDBDeleteForm,errorDB,DeleteFormSuccess);
+	}
+}
+function queryDBDeleteForm(tx){
+	tx.executeSql('DELETE FROM agenda_curso WHERE id='+$.id);
+}
+function DeleteFormSuccess(tx)
+{
+	$("#li_"+$.id).remove();
+	$.mobile.changePage("#home");
 }
 
 
